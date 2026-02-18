@@ -56,8 +56,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-[72px]">
             <Link href="/" className="flex items-center gap-3 shrink-0 group">
-              <Image src="/logo.jpg" alt="Rukn Al Alwan Logo" width={48} height={48} className="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-lg shadow-sm group-hover:shadow-md transition-shadow" />
-              <div className="hidden sm:block">
+              <Image src="/logo.jpg" alt="Rukn Al Alwan Logo" width={48} height={48} className="w-12 h-12 sm:w-11 sm:h-11 object-contain rounded-lg shadow-sm group-hover:shadow-md transition-shadow" />
+              <div>
                 <h1 className="text-sm lg:text-[15px] font-bold text-navy leading-tight tracking-tight">Rukn Al Alwan</h1>
                 <p className="text-[10px] lg:text-[11px] text-gray-400 leading-tight font-medium tracking-wide uppercase">Auto Paints & Spare Parts</p>
               </div>
