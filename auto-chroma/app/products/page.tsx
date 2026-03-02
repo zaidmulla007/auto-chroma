@@ -4,13 +4,18 @@ import {
   ArrowRight,
   Palette,
   Car,
-  Factory,
   SprayCan,
   Sparkles,
   Shield,
   Droplets,
   Layers,
   CheckCircle,
+  ExternalLink,
+  Star,
+  Gem,
+  Wind,
+  Bath,
+  CircleDot,
 } from "lucide-react";
 import AnimateOnScroll from "../components/AnimateOnScroll";
 import SectionHeading from "../components/SectionHeading";
@@ -18,7 +23,7 @@ import SectionHeading from "../components/SectionHeading";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Explore our comprehensive range of automotive paints, industrial coatings, polishes, abrasives, and accessories. AutoChroma, Pure Care, Nexa Autocolor, Sigma, Jotun, Hempel.",
+    "Explore our comprehensive range of automotive paints, industrial coatings, and car detailing products. AutoChroma, Pure Care, Nexa Autocolor, Sigma, Jotun, Nippon, National, Hempel.",
 };
 
 const productCategories = [
@@ -27,36 +32,17 @@ const productCategories = [
     name: "AutoChroma",
     tagline: "Our Premium Paint Brand",
     description:
-      "AutoChroma is our flagship in-house automotive paint brand, engineered to deliver professional-grade finishes with exceptional colour accuracy, durability, and ease of application. Developed through extensive research, AutoChroma offers a complete range of basecoats, clearcoats, primers, and hardeners for the modern refinish workshop.",
+      "AutoChroma is our flagship in-house automotive paint brand, engineered to deliver professional quality finishes with exceptional colour accuracy, durability, and ease of application. AutoChroma offers a complete range of paint items that includes 2K paint Basecoats, Polyurethanes, Epoxys, Clearcoats, Hardeners, Primers, and Polyester Putty for the modern refinish workshop. The range also includes varied consumable items.",
     icon: Palette,
     features: [
-      "Complete basecoat & clearcoat system",
-      "Advanced colour matching technology",
-      "High durability & UV resistance",
-      "Easy application & fast drying",
-      "Competitive pricing for maximum value",
-      "Full technical support included",
+      "Complete 2K, Basecoat & Ancillary system",
+      "High durability & Easy to Apply",
+      "Competitive pricing — Value for Money",
+      "Full technical and colour support",
     ],
     accent: "from-red to-red-dark",
     featured: true,
-  },
-  {
-    id: "purecare",
-    name: "Pure Care",
-    tagline: "Complete Car Care Solutions",
-    description:
-      "Pure Care is our dedicated car care product line, designed to keep vehicles looking their best. From premium polishes and compounds to specialized cleaners and protectants, Pure Care offers everything needed for professional-quality vehicle detailing and maintenance.",
-    icon: Sparkles,
-    features: [
-      "Professional-grade polishes & compounds",
-      "Interior & exterior cleaners",
-      "Paint protection solutions",
-      "Waxes & sealants",
-      "Microfiber & detailing accessories",
-      "Eco-friendly formulations",
-    ],
-    accent: "from-blue-600 to-blue-800",
-    featured: true,
+    website: null,
   },
   {
     id: "nexa",
@@ -75,50 +61,160 @@ const productCategories = [
     ],
     accent: "from-navy to-navy-dark",
     featured: false,
+    website: "https://www.nexaautocolor.com",
+  },
+];
+
+const industrialBrands = [
+  {
+    id: "sigma",
+    name: "Sigma Paints",
+    initials: "SP",
+    gradient: "from-emerald-500 to-emerald-700",
+    description:
+      "Sigma Protective Coatings concentrates on the development of high quality products which solve problems for customers and provide distinctive benefits. Sigma has a global operation covering all continents in 70 countries. PMC offers best-in-class products for marine, infrastructure, chemical processing, power, oil and gas, offshore and rail industry segments. PMC protects customer's assets in some of the world's most demanding conditions and environments.",
+    segments: [
+      "Marine",
+      "Infrastructure",
+      "Chemical Processing",
+      "Power",
+      "Oil & Gas",
+      "Offshore",
+      "Rail",
+    ],
+    website: "https://protective-en.sigmapaints.com",
   },
   {
-    id: "industrial",
-    name: "Industrial Coatings",
-    tagline: "Sigma • Jotun • Hempel",
+    id: "jotun",
+    name: "Jotun Paints",
+    initials: "JP",
+    gradient: "from-sky-500 to-sky-700",
     description:
-      "We are authorized distributors of the world's leading industrial coating brands — Sigma Paints, Jotun Paints, and Hempel Paints. These brands offer high-performance protective and decorative coatings for infrastructure, marine, oil & gas, and industrial applications.",
-    icon: Factory,
-    features: [
-      "Anti-corrosion protective coatings",
-      "Marine & offshore solutions",
-      "Structural steel protection",
-      "Floor coating systems",
-      "High-temperature coatings",
-      "Fire-resistant coatings",
+      "Jotun Protects Property. Jotun is one of the world's leading paints and coatings manufacturers, combining the best quality with constant innovation and creativity. For almost a century, Jotun has protected all types of property — from iconic structures and buildings to beautiful homes.",
+    segments: [
+      "Protective Coatings",
+      "Marine",
+      "Decorative",
+      "Powder Coatings",
     ],
-    accent: "from-emerald-600 to-emerald-800",
-    featured: false,
+    website: "https://www.jotun.com",
   },
   {
-    id: "accessories",
-    name: "Accessories & Ancillaries",
-    tagline: "Everything You Need",
+    id: "nippon",
+    name: "Nippon Paints",
+    initials: "NP",
+    gradient: "from-orange-500 to-red-600",
     description:
-      "Beyond paints and coatings, we supply a comprehensive range of supporting products essential for professional paint application. From abrasives and masking tapes to spray guns and mixing equipment, we're your one-stop shop.",
-    icon: SprayCan,
-    features: [
-      "Abrasive discs & sandpapers",
-      "Masking tapes & films",
-      "Polishing compounds & pads",
-      "Spray guns & accessories",
-      "Mixing cups & equipment",
-      "Safety & PPE supplies",
+      "NIPPON PAINT provides protective coatings in a wide range of fields, including bridges, other infrastructures and plants, based on accumulated technology through a long history of experience. Nippon Paint also applies cutting-edge technology cultivated in automotive coatings to auto refinish technology, providing optimal solutions for the automotive aftermarket with water-based products that contribute to safe working environments and reduced environmental impact.",
+    segments: [
+      "Protective Coatings",
+      "Automotive Refinish",
+      "Infrastructure",
+      "Industrial",
     ],
-    accent: "from-amber-500 to-amber-700",
-    featured: false,
+    website: "https://www.nipponpaint.co.jp/en/products/protective-coatings/",
+    websiteAuto:
+      "https://www.nipponpaint.co.jp/en/products/automotive-refinish/",
+  },
+  {
+    id: "national",
+    name: "National Paints",
+    initials: "NP",
+    gradient: "from-teal-500 to-teal-700",
+    description:
+      "National Paints is a leading paint manufacturer in the Middle East, offering a comprehensive range of interior and exterior paints, professional coatings, and decorative finishes. Known for quality and innovation, National Paints serves both home users and professional contractors across the region.",
+    segments: [
+      "Interior Paints",
+      "Exterior Paints",
+      "Professional Coatings",
+      "Decorative Finishes",
+    ],
+    website: "https://nationalpaints.com",
+  },
+  {
+    id: "hempel",
+    name: "Hempel Paints",
+    initials: "HP",
+    gradient: "from-amber-500 to-orange-600",
+    description:
+      "Hempel provides industry-leading protective coating solutions for energy, infrastructure, marine, and industrial applications. With the mission to make the world last longer beautifully, Hempel delivers high-performance coatings that optimise asset performance and protect against corrosion in the most demanding environments.",
+    segments: [
+      "Energy & Infrastructure",
+      "Marine",
+      "Industrial",
+      "Decorative",
+    ],
+    website: "https://www.hempel.com",
+  },
+];
+
+const pureCareServices = [
+  {
+    title: "Exterior Detailing",
+    icon: Wind,
+    items: [
+      "Hand wash & premium shampoo treatment",
+      "Clay bar decontamination",
+      "Machine polishing & paint correction",
+      "Waxing & paint sealant protection",
+      "Headlight restoration",
+      "Ceramic coating protection",
+    ],
+  },
+  {
+    title: "Interior Detailing",
+    icon: Bath,
+    items: [
+      "Deep vacuum cleaning",
+      "Steam cleaning & sanitization",
+      "Seat shampooing (fabric & leather)",
+      "Dashboard & console detailing",
+      "Odor removal treatment",
+    ],
+  },
+  {
+    title: "Paint Protection",
+    icon: Shield,
+    items: [
+      "Ceramic coating",
+      "Paint Protection Film (PPF)",
+      "Scratch removal & swirl correction",
+      "Long-lasting UV protection",
+    ],
+  },
+  {
+    title: "Additional Services",
+    icon: CircleDot,
+    items: [
+      "Engine bay cleaning",
+      "Alloy wheel detailing",
+      "Window polishing",
+      "Car sanitization & disinfection",
+    ],
   },
 ];
 
 const additionalProducts = [
-  { icon: Droplets, name: "Primers & Fillers", description: "Surface preparation and filling solutions" },
-  { icon: Layers, name: "Clearcoats", description: "High-gloss protective topcoat systems" },
-  { icon: Shield, name: "Hardeners & Activators", description: "Curing agents for paint systems" },
-  { icon: SprayCan, name: "Thinners & Reducers", description: "Solvents for paint viscosity control" },
+  {
+    icon: Droplets,
+    name: "Primers & Fillers",
+    description: "Surface preparation and filling solutions",
+  },
+  {
+    icon: Layers,
+    name: "Clearcoats",
+    description: "High-gloss protective topcoat systems",
+  },
+  {
+    icon: Shield,
+    name: "Hardeners & Activators",
+    description: "Curing agents for paint systems",
+  },
+  {
+    icon: SprayCan,
+    name: "Thinners & Reducers",
+    description: "Solvents for paint viscosity control",
+  },
 ];
 
 export default function ProductsPage() {
@@ -129,26 +225,38 @@ export default function ProductsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e] via-[#0f1b4c] to-[#080e2a]"></div>
         <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-full bg-red/15 blur-[120px]"></div>
         <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] rounded-full bg-blue-600/10 blur-[100px]"></div>
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)`, backgroundSize: "80px 80px" }}></div>
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)`,
+            backgroundSize: "80px 80px",
+          }}
+        ></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase mb-4 text-red-light">Our Products</span>
+          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase mb-4 text-red-light">
+            Our Products
+          </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
             Premium Paints &{" "}
-            <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">Coatings</span>
+            <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">
+              Coatings
+            </span>
           </h1>
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            The best coating technologies for every need. Explore our comprehensive range of automotive refinish paints, industrial coatings, and car care products.
+            The best coating technologies for every need. Explore our
+            comprehensive range of automotive refinish paints, industrial
+            coatings, and car care products.
           </p>
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* AutoChroma & Nexa */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
-            subtitle="Product Range"
-            title="Everything Under One Roof"
-            description="From our own premium brands to internationally acclaimed paint manufacturers — we offer the most comprehensive range in the region."
+            subtitle="Automotive Paints"
+            title="Our Automotive Paint Range"
+            description="From our own premium AutoChroma brand to internationally acclaimed Nexa Autocolor — professional refinish solutions for every workshop."
           />
 
           <div className="space-y-16 lg:space-y-24">
@@ -159,21 +267,16 @@ export default function ProductsPage() {
                   i % 2 === 0 ? "animate-slideInLeft" : "animate-slideInRight"
                 }
               >
-                <div
-                  id={category.id}
-                  className="scroll-mt-24"
-                >
+                <div id={category.id} className="scroll-mt-24">
                   <div
-                    className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                      i % 2 === 1 ? "lg:direction-rtl" : ""
-                    }`}
+                    className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${i % 2 === 1 ? "lg:direction-rtl" : ""
+                      }`}
                   >
-                    {/* Image / Visual card */}
+                    {/* Visual card */}
                     <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                       <div
                         className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${category.accent} p-8 sm:p-12 min-h-[300px] sm:min-h-[380px] flex flex-col justify-between`}
                       >
-                        {/* Decorative elements */}
                         <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
@@ -222,15 +325,119 @@ export default function ProductsPage() {
                           </div>
                         ))}
                       </div>
+                      <div className="flex flex-wrap gap-3">
+                        <Link
+                          href="/contact"
+                          className="group inline-flex items-center gap-2 text-navy font-semibold hover:text-red transition-colors"
+                        >
+                          Enquire About {category.name}
+                          <ArrowRight
+                            size={16}
+                            className="group-hover:translate-x-1 transition-transform"
+                          />
+                        </Link>
+                        {category.website && (
+                          <a
+                            href={category.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-gray-400 text-sm hover:text-red transition-colors"
+                          >
+                            <ExternalLink size={14} />
+                            Visit Website
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industrial Paints Section */}
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#080e2a] via-[#0f1b4c] to-[#0a1035]"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-red/8 blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-blue-600/8 blur-[100px]"></div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <SectionHeading
+            subtitle="Industrial Coatings"
+            title="Industrial Paint Solutions"
+            description="Authorized distributors of the world's leading industrial coating brands — delivering high-performance protective and decorative coatings for every industry."
+            light
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+            {industrialBrands.map((brand, i) => (
+              <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
+                <div
+                  id={brand.id}
+                  className="scroll-mt-24 group rounded-2xl p-6 lg:p-8 bg-white/[0.06] border border-white/[0.08] backdrop-blur-md hover:bg-white/[0.12] hover:border-white/20 transition-all duration-500 h-full hover:-translate-y-2 relative overflow-hidden"
+                >
+                  <div
+                    className={`absolute -top-20 -right-20 w-40 h-40 rounded-full bg-gradient-to-br ${brand.gradient} opacity-0 group-hover:opacity-20 blur-3xl transition-opacity duration-500`}
+                  ></div>
+
+                  <div className="relative z-10">
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${brand.gradient} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <span className="text-white text-lg font-extrabold tracking-tight">
+                        {brand.initials}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-extrabold text-white mb-2">
+                      {brand.name}
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      {brand.description}
+                    </p>
+
+                    {/* Segments */}
+                    <div className="flex flex-wrap gap-1.5 mb-5">
+                      {brand.segments.map((seg, si) => (
+                        <span
+                          key={si}
+                          className="px-2.5 py-1 bg-white/[0.08] text-gray-300 text-[11px] rounded-full font-medium"
+                        >
+                          {seg}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex flex-wrap gap-3 pt-3 border-t border-white/10">
+                      <a
+                        href={brand.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-red-light text-sm font-semibold hover:text-white transition-colors"
+                      >
+                        <ExternalLink size={13} />
+                        Visit Website
+                      </a>
+                      {"websiteAuto" in brand && brand.websiteAuto && (
+                        <a
+                          href={brand.websiteAuto}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-red-light text-sm font-semibold hover:text-white transition-colors"
+                        >
+                          <ExternalLink size={13} />
+                          Auto Refinish
+                        </a>
+                      )}
                       <Link
                         href="/contact"
-                        className="group inline-flex items-center gap-2 text-navy font-semibold hover:text-red transition-colors"
+                        className="inline-flex items-center gap-1.5 text-gray-400 text-sm hover:text-white transition-colors"
                       >
-                        Enquire About {category.name}
-                        <ArrowRight
-                          size={16}
-                          className="group-hover:translate-x-1 transition-transform"
-                        />
+                        Enquire
+                        <ArrowRight size={13} />
                       </Link>
                     </div>
                   </div>
@@ -241,8 +448,91 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Additional Products */}
-      <section className="section-padding bg-gray-50">
+      {/* Pure Care Auto Accessories */}
+      <section className="section-padding bg-white" id="purecare">
+        <div className="max-w-7xl mx-auto">
+          <AnimateOnScroll>
+            <div className="text-center mb-12 lg:mb-16">
+              <span className="inline-block text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-3 text-blue-600">
+                Detailing Solutions
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold mb-3 leading-[1.15] text-navy red-line red-line-center">
+                Pure Care Auto Accessories
+              </h2>
+              <p className="text-lg sm:text-xl font-bold text-blue-600 italic mt-6 mb-2">
+                &ldquo;We care and it Shows&rdquo;
+              </p>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
+                  <Gem size={12} />
+                  Restore
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
+                  <Shield size={12} />
+                  Protect
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
+                  <Star size={12} />
+                  Enhance
+                </span>
+              </div>
+              <p className="max-w-3xl mx-auto text-gray-500 text-[15px] lg:text-base leading-relaxed">
+                Pure Care is a professional car detailing division dedicated to
+                delivering high-quality automotive care services. We specialize
+                in restoring, protecting, and enhancing the appearance of your
+                vehicle using advanced techniques and premium products. Our goal
+                is simple — to provide exceptional detailing services that
+                maintain your vehicle&apos;s value and give it a
+                showroom-quality finish.
+              </p>
+            </div>
+          </AnimateOnScroll>
+
+          <div className="grid sm:grid-cols-2 gap-5 lg:gap-6">
+            {pureCareServices.map((service, i) => (
+              <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
+                <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl p-7 lg:p-8 border border-gray-100 hover:border-blue-200 hover:shadow-[0_12px_40px_rgba(59,130,246,0.08)] transition-all duration-500 h-full">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-md">
+                      <service.icon size={22} className="text-white" />
+                    </div>
+                    <h3 className="text-lg font-extrabold text-navy">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <ul className="space-y-2.5">
+                    {service.items.map((item, ii) => (
+                      <li key={ii} className="flex items-start gap-2.5">
+                        <CheckCircle
+                          size={14}
+                          className="text-blue-500 shrink-0 mt-0.5"
+                        />
+                        <span className="text-gray-600 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+
+          <AnimateOnScroll className="text-center mt-10">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2 text-navy font-semibold hover:text-blue-600 transition-colors"
+            >
+              Enquire About Pure Care
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+      {/* Accessories & Ancillaries */}
+      <section className="section-padding bg-gray-50" id="accessories">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             subtitle="Also Available"
@@ -281,7 +571,8 @@ export default function ProductsPage() {
               Need Help Choosing the Right Product?
             </h2>
             <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-              Our technical team can help you find the perfect paint or coating solution for your specific requirements.
+              Our technical team can help you find the perfect paint or coating
+              solution for your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -289,9 +580,15 @@ export default function ProductsPage() {
                 className="group inline-flex items-center justify-center gap-2.5 px-9 py-4 bg-gradient-to-r from-red to-crimson text-white font-bold rounded-full hover:shadow-[0_8px_30px_rgba(220,38,38,0.4)] transition-all duration-300 hover:-translate-y-1 text-[15px]"
               >
                 Contact Our Team
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </Link>
-              <a href="#" className="inline-flex items-center justify-center gap-2.5 px-9 py-4 text-white font-bold rounded-full hover:bg-white/15 transition-all duration-300 border border-white/20 backdrop-blur-sm text-[15px]">
+              <a
+                href="#"
+                className="inline-flex items-center justify-center gap-2.5 px-9 py-4 text-white font-bold rounded-full hover:bg-white/15 transition-all duration-300 border border-white/20 backdrop-blur-sm text-[15px]"
+              >
                 Download Catalogue
               </a>
             </div>
@@ -299,7 +596,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Spacer between CTA and Footer */}
+      {/* Spacer */}
       <div className="h-10 sm:h-14 bg-gray-100"></div>
     </>
   );

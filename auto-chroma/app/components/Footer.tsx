@@ -15,16 +15,20 @@ import BackToTop from "./BackToTop";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
   { name: "Products", href: "/products" },
   { name: "Contact Us", href: "/contact" },
 ];
 
 const productLinks = [
   { name: "AutoChroma Paints", href: "/products#autochroma" },
-  { name: "Pure Care", href: "/products#purecare" },
+  { name: "Pure Care Auto Accessories", href: "/products#purecare" },
   { name: "Nexa Autocolor", href: "/products#nexa" },
-  { name: "Industrial Coatings", href: "/products#industrial" },
-  { name: "Accessories", href: "/products#accessories" },
+  { name: "Sigma Paints", href: "/products#sigma" },
+  { name: "Jotun Paints", href: "/products#jotun" },
+  { name: "Nippon Paints", href: "/products#nippon" },
+  { name: "National Paints", href: "/products#national" },
+  { name: "Hempel Paints", href: "/products#hempel" },
 ];
 
 export default function Footer() {
