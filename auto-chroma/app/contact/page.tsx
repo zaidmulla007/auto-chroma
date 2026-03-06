@@ -44,12 +44,16 @@ const contactInfo = [
         text: "info@colourcorneruae.com",
         href: "mailto:info@colourcorneruae.com",
       },
+      {
+        text: "sales@colourcorneruae.com",
+        href: "mailto:sales@colourcorneruae.com",
+      },
     ],
   },
   {
     icon: Clock,
     title: "Working Hours",
-    lines: ["Saturday - Thursday: 9:00 AM - 6:00 PM", "Friday: Closed"],
+    lines: ["Monday - Saturday: 8:30 AM - 5:30 PM", "Sunday: Closed"],
   },
 ];
 

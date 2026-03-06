@@ -119,6 +119,22 @@ body {
   50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.6); }
 }
 
+@keyframes sprayShoot {
+  0% { opacity: 0; transform: translateX(0) scale(0.5); }
+  10% { opacity: 0.9; }
+  100% { opacity: 0; transform: translateX(var(--shoot-x, -50vw)) scale(1.5); }
+}
+
+@keyframes sprayCone {
+  0%, 100% { transform: scale(0.9); opacity: inherit; }
+  50% { transform: scale(1.1); opacity: inherit; }
+}
+
+@keyframes gunRecoil {
+  0%, 100% { transform: scaleX(-1) translate(0, 0); }
+  50% { transform: scaleX(-1) translate(-4px, -2px); }
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }

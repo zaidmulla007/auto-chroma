@@ -103,11 +103,11 @@ export default function AboutPage() {
                   A Legacy of Quality in Automotive Paints
                 </h2>
                 <div className="space-y-4 text-gray-500 leading-relaxed">
-                  <p>Welcome to Rukn Al Alwan — one of the fastest growing producers and distributors of car paints and ancillaries for the refinish industry. At Rukn Al Alwan, we believe that success is not a destination but a journey.</p>
+                  <p>Welcome to Rukn Al Alwan — one of the fastest growing company distributing car paints and ancillaries for the refinish industry. At Rukn Al Alwan, we believe that success is not a destination but it is a journey.</p>
                   <p>Along the way, strong business and personal relationships are formed between our partners and us, which has ultimately allowed us to exceed the stringent demands of our industry.</p>
                   <p>By listening to our partners&apos; problems, ideas and solutions, we have quickly contested the stronghold of the major automotive refinishing suppliers in our market.</p>
                   <p className="font-semibold text-navy italic border-l-4 border-gradient-to-b border-red pl-4 py-1 bg-red-50/50 rounded-r-lg">
-                    &ldquo;Only one thing lasts longer than our coatings — our commitment to you.&rdquo;
+                    &ldquo;Only one thing lasts longer than our coatings — is our commitment to you.&rdquo;
                   </p>
                 </div>
               </div>

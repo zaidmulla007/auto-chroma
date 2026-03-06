@@ -105,12 +105,12 @@ export default function ServicesPage() {
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
                         Paint Solutions &{" "}
                         <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">
-                            Services
+                            Detailing Solutions
                         </span>
                     </h1>
                     <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-                        We supply premium automotive paints, industrial coatings, and
-                        ancillary products — empowering workshops, contractors, and
+                        We supply premium automotive paints, industrial paints, and
+                        ancillary products — empowering bodyshops, contractors, and
                         industries across the UAE.
                     </p>
                 </div>

@@ -11,11 +11,6 @@ import {
   Layers,
   CheckCircle,
   ExternalLink,
-  Star,
-  Gem,
-  Wind,
-  Bath,
-  CircleDot,
 } from "lucide-react";
 import AnimateOnScroll from "../components/AnimateOnScroll";
 import SectionHeading from "../components/SectionHeading";
@@ -30,9 +25,9 @@ const productCategories = [
   {
     id: "autochroma",
     name: "AutoChroma",
-    tagline: "Our Premium Paint Brand",
+    tagline: "Our Value line Paint Brand",
     description:
-      "AutoChroma is our flagship in-house automotive paint brand, engineered to deliver professional quality finishes with exceptional colour accuracy, durability, and ease of application. AutoChroma offers a complete range of paint items that includes 2K paint Basecoats, Polyurethanes, Epoxys, Clearcoats, Hardeners, Primers, and Polyester Putty for the modern refinish workshop. The range also includes varied consumable items.",
+      "AutoChroma is our flagship in-house automotive paint brand, engineered to deliver professional quality finishes with exceptional colour accuracy, durability, and ease of application. AutoChroma offers a complete range of paint items that includes 2K paints, Basecoats, Clear coats, Hardner Primer, Thinner, Polyster putty, Polyurethanes, Epoxys for the modern refinish bodyshop. The range also includes varied consumable items.",
     icon: Palette,
     features: [
       "Complete 2K, Basecoat & Ancillary system",
@@ -148,52 +143,6 @@ const industrialBrands = [
   },
 ];
 
-const pureCareServices = [
-  {
-    title: "Exterior Detailing",
-    icon: Wind,
-    items: [
-      "Hand wash & premium shampoo treatment",
-      "Clay bar decontamination",
-      "Machine polishing & paint correction",
-      "Waxing & paint sealant protection",
-      "Headlight restoration",
-      "Ceramic coating protection",
-    ],
-  },
-  {
-    title: "Interior Detailing",
-    icon: Bath,
-    items: [
-      "Deep vacuum cleaning",
-      "Steam cleaning & sanitization",
-      "Seat shampooing (fabric & leather)",
-      "Dashboard & console detailing",
-      "Odor removal treatment",
-    ],
-  },
-  {
-    title: "Paint Protection",
-    icon: Shield,
-    items: [
-      "Ceramic coating",
-      "Paint Protection Film (PPF)",
-      "Scratch removal & swirl correction",
-      "Long-lasting UV protection",
-    ],
-  },
-  {
-    title: "Additional Services",
-    icon: CircleDot,
-    items: [
-      "Engine bay cleaning",
-      "Alloy wheel detailing",
-      "Window polishing",
-      "Car sanitization & disinfection",
-    ],
-  },
-];
-
 const additionalProducts = [
   {
     icon: Droplets,
@@ -239,13 +188,13 @@ export default function ProductsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
             Premium Paints &{" "}
             <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">
-              Coatings
+              Consumables
             </span>
           </h1>
           <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
-            The best coating technologies for every need. Explore our
+            The best coating technology for every need and every space.<br/> Explore our
             comprehensive range of automotive refinish paints, industrial
-            coatings, and car care products.
+            paints, and paint accessories.
           </p>
         </div>
       </section>
@@ -445,89 +394,6 @@ export default function ProductsPage() {
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Pure Care Auto Accessories */}
-      <section className="section-padding bg-white" id="purecare">
-        <div className="max-w-7xl mx-auto">
-          <AnimateOnScroll>
-            <div className="text-center mb-12 lg:mb-16">
-              <span className="inline-block text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-3 text-blue-600">
-                Detailing Solutions
-              </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold mb-3 leading-[1.15] text-navy red-line red-line-center">
-                Pure Care Auto Accessories
-              </h2>
-              <p className="text-lg sm:text-xl font-bold text-blue-600 italic mt-6 mb-2">
-                &ldquo;We care and it Shows&rdquo;
-              </p>
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
-                  <Gem size={12} />
-                  Restore
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
-                  <Shield size={12} />
-                  Protect
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
-                  <Star size={12} />
-                  Enhance
-                </span>
-              </div>
-              <p className="max-w-3xl mx-auto text-gray-500 text-[15px] lg:text-base leading-relaxed">
-                Pure Care is a professional car detailing division dedicated to
-                delivering high-quality automotive care services. We specialize
-                in restoring, protecting, and enhancing the appearance of your
-                vehicle using advanced techniques and premium products. Our goal
-                is simple — to provide exceptional detailing services that
-                maintain your vehicle&apos;s value and give it a
-                showroom-quality finish.
-              </p>
-            </div>
-          </AnimateOnScroll>
-
-          <div className="grid sm:grid-cols-2 gap-5 lg:gap-6">
-            {pureCareServices.map((service, i) => (
-              <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
-                <div className="bg-gradient-to-br from-gray-50 to-blue-50/30 rounded-2xl p-7 lg:p-8 border border-gray-100 hover:border-blue-200 hover:shadow-[0_12px_40px_rgba(59,130,246,0.08)] transition-all duration-500 h-full">
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-md">
-                      <service.icon size={22} className="text-white" />
-                    </div>
-                    <h3 className="text-lg font-extrabold text-navy">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <ul className="space-y-2.5">
-                    {service.items.map((item, ii) => (
-                      <li key={ii} className="flex items-start gap-2.5">
-                        <CheckCircle
-                          size={14}
-                          className="text-blue-500 shrink-0 mt-0.5"
-                        />
-                        <span className="text-gray-600 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-
-          <AnimateOnScroll className="text-center mt-10">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 text-navy font-semibold hover:text-blue-600 transition-colors"
-            >
-              Enquire About Pure Care
-              <ArrowRight
-                size={16}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
-          </AnimateOnScroll>
         </div>
       </section>
 
