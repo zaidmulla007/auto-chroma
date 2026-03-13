@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "../AnimateOnScroll";
 import SectionHeading from "../SectionHeading";
 import { Star, Sparkles } from "lucide-react";
@@ -83,7 +84,10 @@ export default function BrandsSection() {
   return (
     <section className="section-padding overflow-hidden relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#080e2a] via-[#0f1b4c] to-[#0a1035]"></div>
+      <div className="absolute inset-0">
+        <Image src="/png-04.jpg" alt="Automotive workshop" fill className="object-cover" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#080e2a]/90 via-[#0f1b4c]/88 to-[#0a1035]/90"></div>
+      </div>
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-red/8 blur-[120px]"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-blue-600/8 blur-[100px]"></div>
 

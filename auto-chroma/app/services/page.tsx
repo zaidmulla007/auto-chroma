@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
     ArrowRight,
@@ -29,30 +30,35 @@ const autoServices = [
         title: "Refurbished Car Painting",
         description:
             "Complete range of paints and materials for vehicle repainting and restoration — bringing cars back to their original or upgraded appearance.",
+        image: "/png-15.jpg",
     },
     {
         icon: Palette,
         title: "Decorative & Custom Paint Finishes",
         description:
             "Premium paint supplies for unique designs, color customization, and surface treatments tailored to client preferences.",
+        image: "/png-12.jpg",
     },
     {
         icon: Layers,
         title: "Matte Finishing (Mat Finish Coating)",
         description:
             "Professional-grade matte and satin coating products for a modern, stylish look on any vehicle.",
+        image: "/png-19.png",
     },
     {
         icon: Wrench,
         title: "Car Modification Paint Works",
         description:
             "Custom paint solutions and materials for modified vehicles, body kits, and performance upgrades.",
+        image: "/png-18.jpg",
     },
     {
         icon: Sofa,
         title: "Car Interior Decoration & Refinishing",
         description:
             "Interior color customization supplies — dashboard refinishing, trim detailing, and aesthetic enhancement products.",
+        image: "/png-04.jpg",
     },
 ];
 
@@ -62,24 +68,28 @@ const industrialServices = [
         title: "Oil Field Coatings",
         description:
             "Heavy-duty protective coatings designed for oil & gas industry equipment, pipelines, and structures operating in extreme conditions.",
+        image: "/png-21.jpg",
     },
     {
         icon: Building2,
         title: "Commercial Paint Solutions",
         description:
             "Industrial-grade coatings for warehouses, factories, commercial buildings, and large-scale infrastructure projects.",
+        image: "/png-22.jpg",
     },
     {
         icon: Brush,
         title: "Decorative Industrial Paint",
         description:
             "High-quality decorative finishes and coatings for commercial and industrial properties, balancing aesthetics with durability.",
+        image: "/png-06.jpg",
     },
     {
         icon: FlaskConical,
         title: "Chemical-Resistant Coatings",
         description:
             "Specialized coatings engineered for protection against chemicals, corrosion, and harsh environmental conditions.",
+        image: "/png-10.jpg",
     },
 ];
 
@@ -88,7 +98,10 @@ export default function ServicesPage() {
         <>
             {/* Hero */}
             <section className="relative py-24 sm:py-32 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e] via-[#0f1b4c] to-[#080e2a]"></div>
+                <div className="absolute inset-0">
+                    <Image src="/png-03.jpg" alt="Car painting services" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e]/90 via-[#0f1b4c]/85 to-[#080e2a]/90"></div>
+                </div>
                 <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-full bg-red/15 blur-[120px]"></div>
                 <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] rounded-full bg-blue-600/10 blur-[100px]"></div>
                 <div
@@ -128,12 +141,17 @@ export default function ServicesPage() {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
                         {autoServices.map((service, i) => (
                             <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
-                                <div className="group bg-gray-50 rounded-2xl p-7 lg:p-8 hover:bg-white hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-transparent hover:border-gray-100 transition-all duration-500 h-full hover:-translate-y-1.5 relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-red-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                    <div className="relative z-10">
-                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-red to-crimson flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                            <service.icon size={24} className="text-white" />
+                                <div className="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)] border border-gray-100 hover:border-transparent transition-all duration-500 h-full hover:-translate-y-1.5">
+                                    <div className="relative h-48 overflow-hidden">
+                                        <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div className="absolute bottom-3 left-3">
+                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red to-crimson flex items-center justify-center shadow-lg">
+                                                <service.icon size={20} className="text-white" />
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div className="p-6">
                                         <h3 className="text-lg font-extrabold text-navy mb-3">
                                             {service.title}
                                         </h3>
@@ -173,16 +191,24 @@ export default function ServicesPage() {
                     <div className="grid sm:grid-cols-2 gap-5 lg:gap-6 max-w-4xl mx-auto">
                         {industrialServices.map((service, i) => (
                             <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
-                                <div className="group rounded-2xl p-7 lg:p-8 bg-white/[0.06] border border-white/[0.08] backdrop-blur-md hover:bg-white/[0.12] hover:border-white/20 transition-all duration-500 h-full hover:-translate-y-2">
-                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <service.icon size={24} className="text-white" />
+                                <div className="group rounded-2xl overflow-hidden bg-white/[0.06] border border-white/[0.08] backdrop-blur-md hover:bg-white/[0.12] hover:border-white/20 transition-all duration-500 h-full hover:-translate-y-2">
+                                    <div className="relative h-48 overflow-hidden">
+                                        <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700 opacity-80" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b4c]/90 to-transparent"></div>
+                                        <div className="absolute bottom-3 left-3">
+                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg">
+                                                <service.icon size={20} className="text-white" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h3 className="text-lg font-extrabold text-white mb-3">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-300 text-sm leading-relaxed">
-                                        {service.description}
-                                    </p>
+                                    <div className="p-6">
+                                        <h3 className="text-lg font-extrabold text-white mb-3">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-gray-300 text-sm leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </AnimateOnScroll>
                         ))}

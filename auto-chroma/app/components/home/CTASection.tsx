@@ -1,11 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTASection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Rich gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e] via-[#0f1b4c] to-[#1a0a0a]"></div>
+      {/* Rich gradient background with image */}
+      <div className="absolute inset-0">
+        <Image src="/png-20.jpg" alt="Car body preparation" fill className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e]/90 via-[#0f1b4c]/85 to-[#1a0a0a]/90"></div>
+      </div>
       {/* Decorative glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-red/15 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-crimson/10 rounded-full blur-[100px]"></div>

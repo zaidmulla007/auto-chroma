@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimateOnScroll from "../AnimateOnScroll";
 import SectionHeading from "../SectionHeading";
 import {
@@ -56,27 +57,31 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-padding bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative section-padding overflow-hidden">
+      {/* Full section background image */}
+      <div className="absolute inset-0">
+        <Image src="/png-08.jpg" alt="Professional spray painting" fill className="object-cover" />
+        <div className="absolute inset-0 bg-navy/85"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
           subtitle="Why Choose Us"
           title="Your Success Is Our Priority"
           description="Only one thing lasts longer than our coatings — our commitment to you. Here's why hundreds of businesses trust Rukn Al Alwan."
+          light
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {reasons.map((reason, i) => (
             <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
-              <div className="group bg-white rounded-2xl p-7 lg:p-8 shadow-sm hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-gray-100 hover:border-transparent transition-all duration-500 h-full hover:-translate-y-1.5 relative overflow-hidden">
-                {/* Hover gradient overlay */}
-                <div className={`absolute inset-0 ${reason.bg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-
+              <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-7 lg:p-8 border border-white/10 hover:bg-white/20 hover:border-white/25 transition-all duration-500 h-full hover:-translate-y-1.5 relative overflow-hidden">
                 <div className="relative z-10">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${reason.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <reason.icon size={24} className="text-white" />
                   </div>
-                  <h3 className="text-lg font-extrabold text-navy mb-3">{reason.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{reason.description}</p>
+                  <h3 className="text-lg font-extrabold text-white mb-3">{reason.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{reason.description}</p>
                 </div>
               </div>
             </AnimateOnScroll>

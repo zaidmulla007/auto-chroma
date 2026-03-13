@@ -57,7 +57,10 @@ export default function AboutPage() {
     <>
       {/* Hero banner */}
       <section className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e] via-[#0f1b4c] to-[#080e2a]"></div>
+        <div className="absolute inset-0">
+          <Image src="/png-02.jpg" alt="Auto painting" fill className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e]/90 via-[#0f1b4c]/85 to-[#080e2a]/90"></div>
+        </div>
         <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-full bg-red/15 blur-[120px]"></div>
         <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] rounded-full bg-blue-600/10 blur-[100px]"></div>
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px)`, backgroundSize: "80px 80px" }}></div>
@@ -80,18 +83,21 @@ export default function AboutPage() {
             <AnimateOnScroll animation="animate-slideInLeft">
               <div className="relative">
                 <div className="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(15,27,76,0.15)]">
-                  <div className="bg-gradient-to-br from-navy via-navy-light to-navy-dark aspect-[4/3] relative">
-                    <div className="absolute top-8 right-8 w-20 h-20 rounded-full bg-red/25 blur-xl"></div>
-                    <div className="absolute bottom-16 left-12 w-16 h-16 rounded-full bg-blue-500/20 blur-lg"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Image src="/logo.jpg" alt="Rukn Al Alwan" width={250} height={250} className="w-44 h-44 sm:w-56 sm:h-56 object-contain opacity-20 drop-shadow-2xl" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent"></div>
+                  <div className="relative aspect-[4/3]">
+                    <Image src="/png-05.jpg" alt="Professional automotive painting" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy/30 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                       <p className="text-white text-2xl font-extrabold">ركن الالوان</p>
                       <p className="text-gray-300 text-sm mt-1">Rukn Al Alwan (Colour Corner)</p>
                     </div>
                   </div>
+                </div>
+                {/* Secondary images */}
+                <div className="absolute -bottom-6 -right-4 w-40 h-28 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden sm:block">
+                  <Image src="/png-11.jpg" alt="Car preparation and masking" fill className="object-cover" />
+                </div>
+                <div className="absolute -top-4 -right-4 w-32 h-24 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden sm:block">
+                  <Image src="/png-17.jpg" alt="Car repair painting" fill className="object-cover" />
                 </div>
               </div>
             </AnimateOnScroll>
@@ -116,22 +122,29 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
       {/* Timeline */}
-      <section className="section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading subtitle="Our Journey" title="Milestones of Growth" description="From our humble beginnings to becoming a market leader in automotive and industrial paints." />
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/png-04.jpg" alt="Car body repair workshop" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-navy/85"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <SectionHeading subtitle="Our Journey" title="Milestones of Growth" description="From our humble beginnings to becoming a market leader in automotive and industrial paints." light />
           <div className="max-w-3xl mx-auto">
             {milestones.map((milestone, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
                 <div className="flex gap-5 sm:gap-6 mb-8 last:mb-0">
                   <div className="flex flex-col items-center">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${milestone.color} flex items-center justify-center text-white text-sm font-extrabold shrink-0 shadow-md`}>{i + 1}</div>
-                    {i < milestones.length - 1 && <div className="w-0.5 h-full bg-gradient-to-b from-gray-200 to-transparent mt-2"></div>}
+                    {i < milestones.length - 1 && <div className="w-0.5 h-full bg-gradient-to-b from-white/20 to-transparent mt-2"></div>}
                   </div>
                   <div className="pb-8">
-                    <span className="text-[11px] font-bold text-red uppercase tracking-[0.15em]">{milestone.year}</span>
-                    <h3 className="text-lg font-extrabold text-navy mt-1 mb-2">{milestone.title}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed">{milestone.description}</p>
+                    <span className="text-[11px] font-bold text-red-light uppercase tracking-[0.15em]">{milestone.year}</span>
+                    <h3 className="text-lg font-extrabold text-white mt-1 mb-2">{milestone.title}</h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">{milestone.description}</p>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -140,19 +153,26 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
       {/* Core Values */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading subtitle="Core Values" title="What Drives Us Forward" description="Our values define who we are and guide every interaction with our clients and partners." />
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/png-06.jpg" alt="Professional spray painting" fill className="object-cover" sizes="100vw" priority />
+          <div className="absolute inset-0 bg-navy/80"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <SectionHeading subtitle="Core Values" title="What Drives Us Forward" description="Our values define who we are and guide every interaction with our clients and partners." light />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {coreValues.map((value, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
-                <div className="group bg-gray-50 rounded-2xl p-7 lg:p-8 hover:bg-white hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] border border-transparent hover:border-gray-100 transition-all duration-500 h-full hover:-translate-y-1.5">
+                <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-7 lg:p-8 border border-white/10 hover:bg-white/20 hover:border-white/25 transition-all duration-500 h-full hover:-translate-y-1.5">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <value.icon size={24} className="text-white" />
                   </div>
-                  <h3 className="text-lg font-extrabold text-navy mb-3">{value.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{value.description}</p>
+                  <h3 className="text-lg font-extrabold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -160,16 +180,22 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
       {/* Certifications */}
-      <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#080e2a] via-[#0f1b4c] to-[#0a1035]"></div>
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/png-12.jpg" alt="Professional car coating" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-navy/85"></div>
+        </div>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-red/8 blur-[100px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <SectionHeading subtitle="Certifications" title="Recognized & Authorized" description="Our certifications and authorizations reflect our commitment to quality and industry standards." light />
           <AnimateOnScroll>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               {certifications.map((cert, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 bg-white/[0.05] border border-white/[0.08] rounded-xl hover:bg-white/[0.1] hover:border-white/15 transition-all duration-300">
+                <div key={i} className="flex items-center gap-3 p-4 bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl hover:bg-white/[0.1] hover:border-white/15 transition-all duration-300">
                   <div className="w-6 h-6 rounded-full bg-gradient-to-br from-red to-crimson flex items-center justify-center shrink-0">
                     <CheckCircle2 size={14} className="text-white" />
                   </div>
@@ -181,10 +207,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
       {/* Team */}
-      <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading subtitle="Our Team" title="Meet the People Behind Our Success" description="Dedicated professionals with decades of combined experience in the automotive paints industry." />
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/png-15.jpg" alt="Automotive workshop team" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-navy/85"></div>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <SectionHeading subtitle="Our Team" title="Meet the People Behind Our Success" description="Dedicated professionals with decades of combined experience in the automotive paints industry." light />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
@@ -192,9 +225,9 @@ export default function AboutPage() {
                   <div className={`w-28 h-28 mx-auto mb-5 rounded-2xl bg-gradient-to-br ${member.gradient} flex items-center justify-center text-white text-3xl font-extrabold shadow-lg group-hover:shadow-xl group-hover:scale-105 group-hover:rounded-3xl transition-all duration-500`}>
                     {member.name.charAt(0)}
                   </div>
-                  <h3 className="text-lg font-extrabold text-navy mb-1">{member.name}</h3>
-                  <p className="text-red text-sm font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-500 text-sm leading-relaxed">{member.description}</p>
+                  <h3 className="text-lg font-extrabold text-white mb-1">{member.name}</h3>
+                  <p className="text-red-light text-sm font-semibold mb-3">{member.role}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -202,12 +235,19 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
+
       {/* CTA */}
-      <section className="bg-gray-50 py-16 sm:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/png-16.jpg" alt="Car painting finish" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e]/90 via-[#0f1b4c]/85 to-[#080e2a]/90"></div>
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimateOnScroll>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-navy mb-4">Want to Know More?</h2>
-            <p className="text-gray-500 text-lg mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Want to Know More?</h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
               We&apos;d love to discuss how we can support your business with our premium paints and coatings.
             </p>
             <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red to-crimson text-white font-bold rounded-full hover:shadow-[0_8px_30px_rgba(220,38,38,0.4)] transition-all duration-300 hover:-translate-y-1">
@@ -217,6 +257,9 @@ export default function AboutPage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-16 sm:h-20 bg-white"></div>
     </>
   );
 }

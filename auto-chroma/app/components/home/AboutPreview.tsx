@@ -19,29 +19,20 @@ export default function AboutPreview() {
           <AnimateOnScroll animation="animate-slideInLeft">
             <div className="relative">
               {/* Main card */}
-              <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(15,27,76,0.15)]">
-                <div className="bg-gradient-to-br from-navy via-navy-light to-navy-dark aspect-[4/3] relative">
-                  {/* Decorative paint drops */}
-                  <div className="absolute top-8 right-8 w-20 h-20 rounded-full bg-red/30 blur-xl"></div>
-                  <div className="absolute bottom-16 left-12 w-16 h-16 rounded-full bg-blue-500/20 blur-lg"></div>
-                  <div className="absolute top-1/3 left-1/4 w-12 h-12 rounded-full bg-amber-500/15 blur-lg"></div>
-
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Image
-                      src="/logo.jpg"
-                      alt="Rukn Al Alwan"
-                      width={240}
-                      height={240}
-                      className="w-36 h-36 sm:w-52 sm:h-52 object-contain opacity-25 drop-shadow-2xl"
-                    />
+              <div className="relative">
+                <div className="rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(15,27,76,0.15)]">
+                  <div className="relative aspect-[4/3]">
+                    <Image src="/png-01.png" alt="Professional car paint coating" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy/20 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+                      <p className="text-white text-xl font-bold mb-1">Excellence in Every Coat</p>
+                      <p className="text-gray-300 text-sm">Serving the UAE since establishment</p>
+                    </div>
                   </div>
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-transparent to-transparent"></div>
-
-                  <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                    <p className="text-white text-xl font-bold mb-1">Excellence in Every Coat</p>
-                    <p className="text-gray-300 text-sm">Serving the UAE since establishment</p>
-                  </div>
+                </div>
+                {/* Secondary image */}
+                <div className="absolute -bottom-8 -right-4 w-36 h-28 sm:w-44 sm:h-32 rounded-2xl overflow-hidden shadow-xl border-4 border-white hidden sm:block">
+                  <Image src="/png-09.jpg" alt="Car detailing" fill className="object-cover" />
                 </div>
               </div>
 

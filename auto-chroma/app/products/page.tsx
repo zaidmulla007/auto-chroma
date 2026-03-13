@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -171,7 +172,10 @@ export default function ProductsPage() {
     <>
       {/* Hero */}
       <section className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e] via-[#0f1b4c] to-[#080e2a]"></div>
+        <div className="absolute inset-0">
+          <Image src="/png-07.jpg" alt="Premium automotive paints" fill className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f2e]/90 via-[#0f1b4c]/85 to-[#080e2a]/90"></div>
+        </div>
         <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-full bg-red/15 blur-[120px]"></div>
         <div className="absolute bottom-[10%] left-[10%] w-[400px] h-[400px] rounded-full bg-blue-600/10 blur-[100px]"></div>
         <div
@@ -224,32 +228,35 @@ export default function ProductsPage() {
                     {/* Visual card */}
                     <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                       <div
-                        className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${category.accent} p-8 sm:p-12 min-h-[300px] sm:min-h-[380px] flex flex-col justify-between`}
+                        className={`relative rounded-2xl overflow-hidden min-h-[300px] sm:min-h-[380px]`}
                       >
-                        <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                        <Image src={i === 0 ? "/png-10.jpg" : "/png-14.jpg"} alt={category.name} fill className="object-cover" />
+                        <div className={`absolute inset-0 bg-gradient-to-t ${category.accent} opacity-60`}></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
 
-                        <div className="relative z-10">
-                          <category.icon
-                            size={48}
-                            className="text-white/80 mb-6"
-                          />
-                          <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2">
-                            {category.name}
-                          </h3>
-                          <p className="text-white/80 text-lg">
-                            {category.tagline}
-                          </p>
-                        </div>
-
-                        {category.featured && (
-                          <div className="relative z-10 mt-6">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/20 rounded-full text-white text-xs font-semibold backdrop-blur-sm">
-                              <Sparkles size={12} />
-                              Rukn Al Alwan Brand
-                            </span>
+                        <div className="relative z-10 p-8 sm:p-12 flex flex-col justify-between h-full">
+                          <div>
+                            <category.icon
+                              size={48}
+                              className="text-white/90 mb-6"
+                            />
+                            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                              {category.name}
+                            </h3>
+                            <p className="text-white/80 text-lg">
+                              {category.tagline}
+                            </p>
                           </div>
-                        )}
+
+                          {category.featured && (
+                            <div className="mt-6">
+                              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/20 rounded-full text-white text-xs font-semibold backdrop-blur-sm">
+                                <Sparkles size={12} />
+                                Rukn Al Alwan Brand
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
 
