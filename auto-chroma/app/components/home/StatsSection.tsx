@@ -2,13 +2,12 @@
 
 import AnimateOnScroll from "../AnimateOnScroll";
 import { useEffect, useRef, useState } from "react";
-import { Users, Calendar, Award, Package } from "lucide-react";
+import { Calendar, Award, Package } from "lucide-react";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Happy Clients", icon: Users, color: "from-red to-crimson" },
-  { value: 15, suffix: "+", label: "Years of Excellence", icon: Calendar, color: "from-blue-500 to-blue-700" },
-  { value: 6, suffix: "+", label: "Brand Partners", icon: Award, color: "from-amber-500 to-orange-600" },
-  { value: 1000, suffix: "+", label: "Products Available", icon: Package, color: "from-emerald-500 to-emerald-700" },
+  { value: 30, suffix: "+", label: "Years of Excellence", icon: Calendar, color: "from-blue-500 to-blue-700" },
+  { value: 15, suffix: "+", label: "Brand Partners", icon: Award, color: "from-amber-500 to-orange-600" },
+  { value: 500, suffix: "+", label: "Products Available", icon: Package, color: "from-emerald-500 to-emerald-700" },
 ];
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -57,7 +56,7 @@ export default function StatsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative -top-14 sm:-top-20">
           <AnimateOnScroll>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            <div className="grid grid-cols-3 gap-4 sm:gap-5">
               {stats.map((stat, i) => (
                 <div
                   key={i}

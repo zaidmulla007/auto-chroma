@@ -20,7 +20,7 @@ export default function CTASection() {
         <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase mb-4 text-red-light">Get Started Today</span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
           Ready to Transform Your<br />
-          <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">Paint Solutions?</span>
+          <span className="bg-gradient-to-r from-red-light via-red to-crimson bg-clip-text text-transparent">Paint Business?</span>
         </h2>
         <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
           Whether you need automotive refinish paints, industrial coatings, or expert advice — we&apos;re here to help.

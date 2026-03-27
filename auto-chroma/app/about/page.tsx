@@ -34,7 +34,7 @@ const milestones = [
   { year: "Growth", title: "Brand Partnerships", description: "Secured partnerships with leading international paint brands including Nexa Autocolor, Sigma, Jotun, and Hempel.", color: "from-blue-500 to-blue-700" },
   { year: "Innovation", title: "AutoChroma Launch", description: "Launched our own premium automotive paint brand AutoChroma, offering exceptional quality and value.", color: "from-red to-crimson" },
   { year: "Expansion", title: "Pure Care Introduction", description: "Introduced Pure Care product line for comprehensive car care including polishes and maintenance products.", color: "from-emerald-500 to-emerald-700" },
-  { year: "Present", title: "Market Leader", description: "Serving 500+ clients across the UAE and Middle East with a comprehensive range of automotive and industrial paints.", color: "from-amber-500 to-orange-600" },
+  { year: "Present", title: "Market Leader", description: "Offering 500+ products across the UAE and Middle East with a comprehensive range of automotive and industrial paints and 15+ brand partners.", color: "from-amber-500 to-orange-600" },
 ];
 
 const certifications = [
@@ -113,7 +113,7 @@ export default function AboutPage() {
                   <p>Along the way, strong business and personal relationships are formed between our partners and us, which has ultimately allowed us to exceed the stringent demands of our industry.</p>
                   <p>By listening to our partners&apos; problems, ideas and solutions, we have quickly contested the stronghold of the major automotive refinishing suppliers in our market.</p>
                   <p className="font-semibold text-navy italic border-l-4 border-gradient-to-b border-red pl-4 py-1 bg-red-50/50 rounded-r-lg">
-                    &ldquo;Only one thing lasts longer than our coatings — is our commitment to you.&rdquo;
+                    &ldquo;Only one thing lasts longer than our coatings — is our commitment to our customers.&rdquo;
                   </p>
                 </div>
               </div>

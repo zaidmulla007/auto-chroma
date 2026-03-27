@@ -26,7 +26,7 @@ export default function AboutPreview() {
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                       <p className="text-white text-xl font-bold mb-1">Excellence in Every Coat</p>
-                      <p className="text-gray-300 text-sm">Serving the UAE since establishment</p>
+                      <p className="text-gray-300 text-sm">Serving the UAE since over a decade</p>
                     </div>
                   </div>
                 </div>
@@ -37,14 +37,14 @@ export default function AboutPreview() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-3 sm:-right-6 bg-gradient-to-br from-red to-crimson text-white rounded-2xl p-5 sm:p-6 shadow-[0_10px_30px_rgba(220,38,38,0.35)] hover:scale-105 transition-transform duration-300">
-                <p className="text-3xl sm:text-4xl font-extrabold leading-none">15+</p>
+              <div className="absolute bottom-4 -right-3 sm:-right-6 bg-gradient-to-br from-red to-crimson text-white rounded-2xl p-5 sm:p-6 shadow-[0_10px_30px_rgba(220,38,38,0.35)] hover:scale-105 transition-transform duration-300">
+                <p className="text-3xl sm:text-4xl font-extrabold leading-none">30+</p>
                 <p className="text-xs sm:text-sm font-semibold opacity-90 mt-1">Years of<br />Excellence</p>
               </div>
 
               {/* Small floating card */}
               <div className="absolute -top-4 -left-3 sm:-left-5 bg-white rounded-xl p-3 sm:p-4 shadow-[0_8px_25px_rgba(0,0,0,0.1)] border border-gray-100">
-                <p className="text-2xl sm:text-3xl font-extrabold text-navy leading-none">6+</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-navy leading-none">15+</p>
                 <p className="text-[10px] sm:text-xs text-gray-500 font-semibold mt-1">Brand Partners</p>
               </div>
             </div>

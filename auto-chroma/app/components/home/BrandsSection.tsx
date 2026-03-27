@@ -7,17 +7,9 @@ const brands = [
   {
     name: "AutoChroma",
     type: "Our Premium Brand",
-    description: "Our flagship in-house automotive paint brand — 2K Basecoats, Polyurethanes, Epoxys, Clearcoats, Primers, and Putty.",
+    description: "Our flagship in-house automotive paint brand — 2K, Basecoats, Clearcoats, primer putty, Polyurethanes, Epoxys",
     initials: "AC",
     gradient: "from-red via-crimson to-red-dark",
-    featured: true,
-  },
-  {
-    name: "Pure Care",
-    type: "Auto Accessories & Detailing",
-    description: "Professional car detailing — exterior polishing, interior cleaning, ceramic coating, paint protection, and more.",
-    initials: "PC",
-    gradient: "from-blue-500 via-blue-600 to-blue-700",
     featured: true,
   },
   {
@@ -71,13 +63,15 @@ const brands = [
 ];
 
 const clients = [
-  "Polymar Paints",
-  "Shaji Paints",
   "Galadari Automobiles",
-  "MPE (Multiple Product Enterprises)",
-  "Ugarit Paints",
-  "Trichy Trading",
-  "Arabian Options",
+  "PPG Industries",
+  "Nexa Autocolor",
+  "Sigma Paints",
+  "Jotun Paints",
+  "Hempel Paints",
+  "National Paints",
+  "Nippon Paints",
+  "3M",
 ];
 
 export default function BrandsSection() {

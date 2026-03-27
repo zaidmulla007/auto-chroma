@@ -43,7 +43,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-xl mb-10 leading-relaxed animate-fadeInUp delay-200">
-              Premium automotive &amp; industrial paints, coatings, and accessories.
+              Premium automotive paints, industrial paints and accessories.
               Your one-stop destination for the finest paint solutions in the UAE.
             </p>
 
@@ -61,17 +61,17 @@ export default function HeroSection() {
             <div className="flex items-center gap-5 mt-12 pt-8 border-t border-white/10 animate-fadeInUp delay-400">
               <div className="text-center px-4">
                 <p className="text-2xl sm:text-3xl font-extrabold text-white">500<span className="text-red-light">+</span></p>
-                <p className="text-gray-400 text-xs font-medium mt-1">Happy Clients</p>
+                <p className="text-gray-400 text-xs font-medium mt-1">Products Available</p>
               </div>
               <div className="w-px h-10 bg-white/15"></div>
               <div className="text-center px-4">
-                <p className="text-2xl sm:text-3xl font-extrabold text-white">15<span className="text-red-light">+</span></p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-white">30<span className="text-red-light">+</span></p>
                 <p className="text-gray-400 text-xs font-medium mt-1">Years Experience</p>
               </div>
               <div className="w-px h-10 bg-white/15"></div>
               <div className="text-center px-4">
-                <p className="text-2xl sm:text-3xl font-extrabold text-white">6<span className="text-red-light">+</span></p>
-                <p className="text-gray-400 text-xs font-medium mt-1">Major Brands</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-white">15<span className="text-red-light">+</span></p>
+                <p className="text-gray-400 text-xs font-medium mt-1">Brand Partners</p>
               </div>
             </div>
           </div>
@@ -79,10 +79,10 @@ export default function HeroSection() {
           {/* Right - Image showcase */}
           <div className="hidden lg:grid grid-cols-2 gap-4 animate-fadeInUp delay-300">
             {[
-              { src: "/png-03.jpg", alt: "Car spray painting", title: "Automotive Paints", desc: "Premium refinish from world-leading brands" },
-              { src: "/png-07.jpg", alt: "Red car coating", title: "Quality Assured", desc: "Certified to international standards" },
-              { src: "/png-05.jpg", alt: "Professional spray painting", title: "Industrial Coatings", desc: "Protective coatings for all industries" },
-              { src: "/png-09.jpg", alt: "Car detailing", title: "Expert Support", desc: "Guidance from experienced professionals" },
+              { src: "/png-07.jpg", alt: "Red car spray painting", title: "Automotive Paints", desc: "Premium refinish from world-leading brands" },
+              { src: "/png-09.jpg", alt: "Car polishing and detailing", title: "Quality Assured", desc: "Certified to international standards" },
+              { src: "/png-23.jpeg", alt: "Industrial coating application", title: "Industrial Coatings", desc: "Protective coatings for all industries" },
+              { src: "/png-24.jpeg", alt: "Expert paint support", title: "Expert Support", desc: "Guidance from experienced professionals" },
             ].map((card, i) => (
               <div key={i} className="group relative rounded-2xl overflow-hidden border border-white/[0.08] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 aspect-[4/3]">
                 <Image src={card.src} alt={card.alt} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
