@@ -8,7 +8,6 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Download,
 } from "lucide-react";
 import BackToTop from "./BackToTop";
 
@@ -22,7 +21,6 @@ const quickLinks = [
 
 const productLinks = [
   { name: "AutoChroma Paints", href: "/products#autochroma" },
-  { name: "Pure Care Auto Accessories", href: "/products#purecare" },
   { name: "Nexa Autocolor", href: "/products#nexa" },
   { name: "Sigma Paints", href: "/products#sigma" },
   { name: "Jotun Paints", href: "/products#jotun" },
@@ -55,8 +53,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
-              Your trusted partner for premium automotive and industrial paints,
-              coatings, and accessories in the UAE since establishment.
+              Your trusted partner for premium automotive paints ,industrial paints and accessories in the UAE since decades.
             </p>
             <p className="text-gray-300 text-sm italic">
               &ldquo;Adding Colour to Your Drive&rdquo;
@@ -131,14 +128,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            {/* Download catalogue */}
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-red/20 text-red-light text-sm rounded-lg hover:bg-red/30 transition-colors"
-            >
-              <Download size={14} />
-              Download Catalogue
-            </a>
           </div>
 
           {/* Contact info */}
@@ -182,8 +171,8 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Clock size={16} className="text-red-light shrink-0 mt-0.5" />
                 <div className="text-gray-300 text-sm">
-                  <p>Sat - Thu: 9:00 AM - 6:00 PM</p>
-                  <p>Fri: Closed</p>
+                  <p>Monday - Saturday: 8:30 AM - 5:30 PM</p>
+                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>

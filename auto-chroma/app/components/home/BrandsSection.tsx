@@ -7,7 +7,7 @@ const brands = [
   {
     name: "AutoChroma",
     type: "Our Premium Brand",
-    description: "Our flagship in-house automotive paint brand — 2K, Basecoats, Clearcoats, primer putty, Polyurethanes, Epoxys",
+    description: "Our flagship in-house automotive paint brand — 2K, Basecoats, Clearcoats, primer , putty, Polyurethanes, Epoxys",
     initials: "AC",
     gradient: "from-red via-crimson to-red-dark",
     featured: true,
@@ -63,7 +63,6 @@ const brands = [
 ];
 
 const clients = [
-  "Galadari Automobiles",
   "PPG Industries",
   "Nexa Autocolor",
   "Sigma Paints",
@@ -131,7 +130,7 @@ export default function BrandsSection() {
         <AnimateOnScroll>
           <div className="text-center mb-8">
             <h3 className="text-xl sm:text-2xl font-extrabold text-white mb-2">Our Trusted Business Partners</h3>
-            <p className="text-gray-400 text-sm">Proudly serving leading companies across the UAE</p>
+            <p className="text-gray-400 text-sm">Proudly representing leading companies across the UAE</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {clients.map((client, i) => (

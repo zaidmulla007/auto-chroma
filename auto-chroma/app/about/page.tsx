@@ -8,7 +8,6 @@ import {
   Shield,
   Users,
   Award,
-  CheckCircle2,
   ArrowRight,
 } from "lucide-react";
 import AnimateOnScroll from "../components/AnimateOnScroll";
@@ -22,33 +21,24 @@ export const metadata: Metadata = {
 
 const coreValues = [
   { icon: Target, title: "Quality Excellence", description: "We are committed to sourcing and delivering only the highest quality products that meet international standards.", color: "from-red to-crimson" },
-  { icon: Heart, title: "Customer First", description: "Our customers' profitability and satisfaction drive every decision we make. Your success is our success.", color: "from-pink-500 to-rose-600" },
-  { icon: Shield, title: "Integrity & Trust", description: "We build relationships based on transparency, honesty, and mutual respect with every partner and client.", color: "from-blue-500 to-blue-700" },
-  { icon: Eye, title: "Innovation", description: "We continuously explore cutting-edge coatings technology to bring the best solutions to our market.", color: "from-violet-500 to-purple-700" },
-  { icon: Users, title: "Partnership", description: "We listen to our partners' problems, ideas, and solutions to provide tailored results together.", color: "from-emerald-500 to-emerald-700" },
-  { icon: Award, title: "Professionalism", description: "Our emphasis is on transparency and professionalism in performing the highest quality service efficiently.", color: "from-amber-500 to-orange-600" },
+  { icon: Heart, title: "Customer First", description: "Our customers profitability and satisfaction drives every decision we make. Your success is our success.", color: "from-pink-500 to-rose-600" },
+  { icon: Shield, title: "Integrity & Trust", description: "We build relationships based on transparency, honesty, and mutual respect with every customer and partner.", color: "from-blue-500 to-blue-700" },
+  { icon: Eye, title: "Innovation", description: "We continuously source cutting-edge technology coatings to bring the best solutions to our customers.", color: "from-violet-500 to-purple-700" },
+  { icon: Users, title: "Partnership", description: "We listen to our partners problems, ideas, and suggestions to provide tailored solutions together.", color: "from-emerald-500 to-emerald-700" },
+  { icon: Award, title: "Professionalism", description: "Our emphasis is on transparency and professionalism in delivering the highest quality service efficiently.", color: "from-amber-500 to-orange-600" },
 ];
 
 const milestones = [
-  { year: "Establishment", title: "Company Founded", description: "Rukn Al Alwan Auto Paints & Spare Parts Trading LLC was established in Sharjah, UAE.", color: "from-navy to-navy-light" },
-  { year: "Growth", title: "Brand Partnerships", description: "Secured partnerships with leading international paint brands including Nexa Autocolor, Sigma, Jotun, and Hempel.", color: "from-blue-500 to-blue-700" },
-  { year: "Innovation", title: "AutoChroma Launch", description: "Launched our own premium automotive paint brand AutoChroma, offering exceptional quality and value.", color: "from-red to-crimson" },
-  { year: "Expansion", title: "Pure Care Introduction", description: "Introduced Pure Care product line for comprehensive car care including polishes and maintenance products.", color: "from-emerald-500 to-emerald-700" },
-  { year: "Present", title: "Market Leader", description: "Offering 500+ products across the UAE and Middle East with a comprehensive range of automotive and industrial paints and 15+ brand partners.", color: "from-amber-500 to-orange-600" },
-];
-
-const certifications = [
-  "ISO Quality Management Standards",
-  "Authorized Nexa Autocolor Distributor",
-  "Authorized Sigma Paints Distributor",
-  "Authorized Jotun Paints Distributor",
-  "Authorized Hempel Paints Distributor",
-  "UAE Trade License - Sharjah",
+  { year: "Establishment", title: "Company Founded", description: "Rukn Al Alwan Auto Paints & Spare Parts Trading LLC was established in Sharjah, UAE over a decade ago.", color: "from-navy to-navy-light" },
+  { year: "Growth", title: "Brand Partnerships", description: "Secured partnerships with leading international paint brands including Nexa Autocolor, Sigma, Jotun, and Nippon.", color: "from-blue-500 to-blue-700" },
+  { year: "Innovation", title: "AutoChroma Launch", description: "Launched our own premium automotive paint brand AutoChroma, offering exceptional quality and range of products.", color: "from-red to-crimson" },
+  { year: "Expansion", title: "Pure Care Introduction", description: "Introduced Pure Care Detailing services for comprehensive car care solutions which include interior cleaning polishing , window tinting , ceramic coating ,PPF & Car wrapping, seat upholstery etc.", color: "from-emerald-500 to-emerald-700" },
+  { year: "Present", title: "Market Leader", description: "Offering 500+ products across the UAE and Middle East with a comprehensive range of automotive and industrial paints with 15+ brand partners.", color: "from-amber-500 to-orange-600" },
 ];
 
 const teamMembers = [
   { name: "Dayanand Shetty", role: "Managing Director", description: "Leading Rukn Al Alwan with decades of experience in the automotive paints and coatings industry.", gradient: "from-navy to-navy-light" },
-  { name: "Technical Team", role: "Colour Matching & Technical Support", description: "Expert technicians providing colour matching, product recommendations, and application guidance.", gradient: "from-red to-crimson" },
+  { name: "Technical Team", role: "Colour Matching & Technical Support", description: "Expert trainers providing colour matching, product recommendations, and application techniques.", gradient: "from-red to-crimson" },
   { name: "Sales Team", role: "Customer Relations & Business Development", description: "Dedicated professionals building lasting partnerships with clients across the UAE and Middle East.", gradient: "from-blue-500 to-blue-700" },
 ];
 
@@ -132,7 +122,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-navy/85"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <SectionHeading subtitle="Our Journey" title="Milestones of Growth" description="From our humble beginnings to becoming a market leader in automotive and industrial paints." light />
+          <SectionHeading subtitle="Our Journey" title="Milestones of Growth" description="From our humble beginning to become a market leader in automotive and industrial paints." light />
           <div className="max-w-3xl mx-auto">
             {milestones.map((milestone, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
@@ -163,7 +153,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-navy/80"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <SectionHeading subtitle="Core Values" title="What Drives Us Forward" description="Our values define who we are and guide every interaction with our clients and partners." light />
+          <SectionHeading subtitle="Core Values" title="What Drives Us Forward" description="Our values - customer success, customer satisfaction, and win-win approach." light />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {coreValues.map((value, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
@@ -183,32 +173,6 @@ export default function AboutPage() {
       {/* Spacer */}
       <div className="h-16 sm:h-20 bg-white"></div>
 
-      {/* Certifications */}
-      <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image src="/png-12.jpg" alt="Professional car coating" fill className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-navy/85"></div>
-        </div>
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-red/8 blur-[100px]"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <SectionHeading subtitle="Certifications" title="Recognized & Authorized" description="Our certifications and authorizations reflect our commitment to quality and industry standards." light />
-          <AnimateOnScroll>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              {certifications.map((cert, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 bg-white/[0.05] backdrop-blur-md border border-white/[0.08] rounded-xl hover:bg-white/[0.1] hover:border-white/15 transition-all duration-300">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-red to-crimson flex items-center justify-center shrink-0">
-                    <CheckCircle2 size={14} className="text-white" />
-                  </div>
-                  <span className="text-sm text-gray-300 font-medium">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
-      {/* Spacer */}
-      <div className="h-16 sm:h-20 bg-white"></div>
 
       {/* Team */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
@@ -217,7 +181,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-navy/85"></div>
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <SectionHeading subtitle="Our Team" title="Meet the People Behind Our Success" description="Dedicated professionals with decades of combined experience in the automotive paints industry." light />
+          <SectionHeading subtitle="Our Team" title="Meet the People Behind Our Success" description="Dedicated professionals with decades of combined experience in the paint industry." light />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, i) => (
               <AnimateOnScroll key={i} delay={`delay-${(i + 1) * 100}`}>
@@ -248,7 +212,7 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Want to Know More?</h2>
             <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-              We&apos;d love to discuss how we can support your business with our premium paints and coatings.
+              We&apos;d love to discuss how we can support your business with our premium paints and value added services.
             </p>
             <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red to-crimson text-white font-bold rounded-full hover:shadow-[0_8px_30px_rgba(220,38,38,0.4)] transition-all duration-300 hover:-translate-y-1">
               Get In Touch

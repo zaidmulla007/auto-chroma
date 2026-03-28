@@ -123,8 +123,7 @@ export default function ServicesPage() {
                     </h1>
                     <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
                         We supply premium automotive paints, industrial paints, and
-                        ancillary products — empowering bodyshops, contractors, and
-                        industries across the UAE.
+                        ancillary products — Car care solutions like interior cleaning, polishing, window tinting, ceramic coating, PPF, and car wrapping.
                     </p>
                 </div>
             </section>
@@ -134,7 +133,7 @@ export default function ServicesPage() {
                 <div className="max-w-7xl mx-auto">
                     <SectionHeading
                         subtitle="Automotive Solutions"
-                        title="Auto Coating & Customization"
+                        title="Refinish & Customization"
                         description="We supply high-quality automotive paint products and materials for professional painting and customization. Our experienced team ensures you get the right products for precision, durability, and a flawless finish."
                     />
 
@@ -167,7 +166,7 @@ export default function ServicesPage() {
                     <AnimateOnScroll className="text-center mt-10">
                         <p className="text-gray-500 text-base italic max-w-2xl mx-auto">
                             We combine premium automotive coatings with expert product
-                            guidance to ensure long-lasting beauty and protection for every
+                            recommendations to ensure long-lasting beauty and protection for every
                             vehicle.
                         </p>
                     </AnimateOnScroll>

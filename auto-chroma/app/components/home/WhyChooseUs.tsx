@@ -21,7 +21,7 @@ const reasons = [
   {
     icon: Palette,
     title: "Extensive Range",
-    description: "From automotive refinish paints, industrial coatings to various consumables like polishes, abrasives — everything under one roof.",
+    description: "From automotive refinish paints, industrial coatings to various consumables like polishes, abrasives etc everything under one roof.",
     color: "from-violet-500 to-purple-700",
     bg: "bg-purple-50",
   },
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
         <SectionHeading
           subtitle="Why Choose Us"
           title="Your Success Is Our Priority"
-          description="Only one thing lasts longer than our coatings — our commitment to you. Here's why hundreds of businesses trust Rukn Al Alwan."
+          description="Only one thing lasts longer than our coatings is our commitment to our customers. Here's why hundreds of businesses trust Rukn Al Alwan."
           light
         />
 
