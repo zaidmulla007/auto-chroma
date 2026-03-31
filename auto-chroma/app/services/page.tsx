@@ -68,28 +68,28 @@ const industrialServices = [
         title: "Oil Field Coatings",
         description:
             "Heavy-duty protective coatings designed for oil & gas industry equipment, pipelines, and structures operating in extreme conditions.",
-        image: "/png-21.jpg",
+        image: "/png-25.jpeg",
     },
     {
         icon: Building2,
         title: "Commercial Paint Solutions",
         description:
             "Industrial-grade coatings for warehouses, factories, commercial buildings, and large-scale infrastructure projects.",
-        image: "/png-22.jpg",
+        image: "/png-26.jpeg",
     },
     {
         icon: Brush,
         title: "Decorative Industrial Paint",
         description:
             "High-quality decorative finishes and coatings for commercial and industrial properties, balancing aesthetics with durability.",
-        image: "/png-06.jpg",
+        image: "/png-27.jpeg",
     },
     {
         icon: FlaskConical,
         title: "Chemical-Resistant Coatings",
         description:
             "Specialized coatings engineered for protection against chemicals, corrosion, and harsh environmental conditions.",
-        image: "/png-10.jpg",
+        image: "/png-28.jpeg",
     },
 ];
 
